@@ -1,0 +1,92 @@
+In the Grad Presenation Scala File Readme file there are 9 different ruby files explaining different concepts of Object-oriented programming in Scala.
+The following OOPs topics have been used -
+
+1. Class and Objects
+2. Abstract Class
+3. Access Modifiers - Private, Protected, No Modifier
+4. Inheritance
+5. Polymorphism - Method Overloading
+6. Method Overriding
+
+The following files are included to illustrate OOPs concepts -
+
+1. abstractClass.scala
+2. accessModifier1_Private.scala
+3. accessModifier1_Protected.scala
+4. accessModifier1_Public.scala
+5. accessingVariables.scala
+6. accessingMethods.scala
+7. inheritance.scala
+8. methodOverriding.scala
+9. polymorphism_methodOverloading.scala
+
+The purpose of each file is elaborated below -
+
+1. abstractClass.scala - In scala abstract class is created using the "abstract" keyword and its methods may or not be overriden in the 
+classes extending to them.The example shows class "Hero" inherits abstract class "Bike" and defines "Bike's" method "run" in "Hero" class.
+We can see in main function object of Hero class is created and is used to execute the methods "run" and "performance". As a result we 
+see corresponding outputs of both methods.
+Output:
+Running fine...
+a = 10
+b = 20
+c = 30
+Performance awesome
+
+2. accessModifier1_Private.scala - Scala has 3 access modifiers namely - Private, Protected and No Modifier(Public). The Private attributes
+can not be accessed from outside the class in which it belongs. As we can see the program is trying to modify the value of private data 
+member "a" from class "AccessExample" which is not permitted. Hence the program when executed will generate error.
+Output:
+error: variable a in class AccessExample cannot be accessed in AccessExample
+        p.a = 12
+          ^
+one error found
+Command exited with non-zero status 1
+
+3. accessModifier1_Protected.scala - Unlike Private access modifier Protected members are accessible only within class, subclass and 
+companion object. The example program shows that the class "AccessExample" has a protected variable "a" and it is inheritted by SubClass.
+Inside SubClass the protected variable "a" is displayed using SubClass method display. Finally the display function is invoked from 
+Main to view the output.
+Output:
+a=10
+
+4. accessModifier1_Public.scala - No modifier or public access modifier is the default status of members of a class when no other access
+modifier is explicitely stated. Public members can be accessed from outside the class as can be seen from the example program.
+Output:
+a=10
+
+5. accessingVariables.scala - Variables in Scala may or may not be accessed from outsde the class that declares them depending on their
+access modifier (private,protected or public). In the example program no access modifier is explicitely stated for the variables "id"
+and "name" in the class "Student". As a result they can be accessed from outside the class as is shown using Main displaying the values 
+of the variables.
+Output:
+100 Smith
+
+6. accessingMethods.scala - In Scala methods are accessed using objects of class containing those methods. As can be seen from the example
+program method getRecord from class Student is accessed from main and the arguments are passed using different objects of Student class.
+Output:
+101 Raju
+102 Martin
+
+7. inheritance.scala - Although scala supports all of the major types of inheritance, the example program illustrates the simplest case - 
+Single Inheritance. Here it shows how class "Programmer" is a subclass of class "Employee" and how the object of subclass "Programmer" is
+used to access the variable "salary" of class Employee(as it is inheritted by Programmer) and display the values of "salary" and "bonus" 
+in class "Progarmmer".
+Output:
+Salary = 10000.0
+Bonus = 5000
+
+8. methodOverriding.scala - In Scala a method can be overridden by first inheritting the class that contains the method and second by 
+using the keyword "override" prior writing "def function_name". The example shows how clas "Bike" is a subclass of class "Vehicle" and 
+overrides method "run" of "Vehicle" in "Bike". Main creates object of subclass "Bike" and invokes the overridden method "run" to see the
+modified method definition. "Vehicle is running" becomes "Bike is running".
+Output:
+Bike is running
+
+9. polymorphism_methodOverloading.scala - Like other Object Oriented languages Scala supports Polymorphism as can be seen in form of 
+method overloading in the example program. Class "Arithmetic" has two methods "add" and "add", each with a different method signature 
+but the same method definition. The different "add" methods are invoked with different parameter list(integer and floating point in 
+this case) to display the respective outputs. 
+Output;
+20
+30.0
